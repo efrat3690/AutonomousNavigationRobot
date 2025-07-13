@@ -1,0 +1,163 @@
+/* app.css או כל קובץ שתייבאי ל-App.jsx
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  background-color: #f0f4f8;
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+}
+
+.welcome-screen h3 {
+  font-size: 2em;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.welcome-screen p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-screen button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-screen button:hover {
+  background-color: #004d40;
+} */
+/* app.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  height: 100%;
+  overflow: hidden; /* מונע גלילה */
+  background: linear-gradient(135deg, #e0f2f1, #ffffff);
+  position: relative;
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.welcome-screen h3 {
+  font-size: 2em;
+  color: #004d40;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.welcome-screen p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.welcome-screen button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.welcome-screen button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+/* קישוטים גאומטריים */
+.background-decoration {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  opacity: 0.3;
+}
+
+.triangle1 {
+  border-width: 0 150px 150px 0;
+  border-color: transparent #00796b transparent transparent;
+  top: 0;
+  left: 0;
+}
+
+.triangle2 {
+  border-width: 0 0 200px 200px;
+  border-color: transparent transparent #004d40 transparent;
+  bottom: 0;
+  right: 0;
+}
+
+.triangle3 {
+  border-width: 100px 100px 0 0;
+  border-color: #009688 transparent transparent transparent;
+  top: 20%;
+  right: 10%;
+}
+body {
+  animation: gradientShift 15s ease infinite;
+  background: linear-gradient(135deg, #e0f2f1, #ffffff, #b2dfdb);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+.triangle {
+  animation: float 6s ease-in-out infinite;
+}
+

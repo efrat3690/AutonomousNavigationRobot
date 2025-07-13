@@ -1,0 +1,28 @@
+{
+  "כיתה א": [
+    { "action": "forward", "distance": 500 },
+    { "action": "right" },
+    { "action": "forward", "distance": 200 },
+    { "action": "stop" }
+  ],
+  "כיתה ב": [
+    { "action": "forward", "distance": 300 },
+    { "action": "left" },
+    { "action": "forward", "distance": 150 },
+    { "action": "right" },
+    { "action": "forward", "distance": 100 },
+    { "action": "stop" }
+  ],
+  "כיתה ג": [
+    { "action": "forward", "distance": 250 },
+    { "action": "right" },
+    { "action": "forward", "distance": 350 },
+    { "action": "stop" }
+  ],
+  "כיתה ד": [
+    { "action": "forward", "distance": 400 },
+    { "action": "left" },
+    { "action": "forward", "distance": 200 },
+    { "action": "stop" }
+  ]
+}

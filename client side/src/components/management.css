@@ -1,0 +1,108 @@
+/* management.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0f2f1, #ffffff);
+  position: relative;
+}
+
+/* משולשים לקישוט */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 0;
+}
+
+body::before {
+  top: 0;
+  right: 0;
+  border-top: 150px solid #00796b;
+  border-left: 150px solid transparent;
+  opacity: 0.5;
+}
+
+body::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 200px solid #004d40;
+  border-right: 200px solid transparent;
+  opacity: 0.4;
+}
+
+.management-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  color: #004d40;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.type-button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.type-button:hover {
+  background-color: #004d40;
+}
+
+.map-container {
+  flex: 1;
+  border: 2px solid #00796b;
+  border-radius: 12px;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.point {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #00796b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.point-label {
+  position: absolute;
+  background-color: #00796b;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  border-radius: 6px;
+  transform: translate(-50%, -150%);
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.map-canvas {
+  z-index: 1;
+}

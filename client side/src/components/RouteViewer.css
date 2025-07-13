@@ -1,0 +1,103 @@
+/* איפוס כללי */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5faff;
+}
+.route-container {
+  max-width: 720px; 
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background: #e1f5fe;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #01579b;
+  user-select: none;
+  text-align: center;
+}
+
+/* כותרת */
+.route-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* תוכן - מפה + מידע */
+.route-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 900px;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+/* המפה */
+.route-map {
+  flex: 1;
+  max-width: 70%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #0288d1;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(2, 136, 209, 0.15);
+}
+
+/* הנקודות והחץ */
+.route-point {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+.vehicle {
+  cursor: default;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+/* מידע על המסלול */
+.route-info {
+  width: 28%;
+  min-width: 160px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.route-info p {
+  margin: 0.4rem 0;
+  font-weight: 600;
+  color: #014a75;
+}
+
+/* רספונסיביות לנייד */
+@media (max-width: 768px) {
+  .route-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .route-map {
+    max-width: 100%;
+  }
+
+  .route-info {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
